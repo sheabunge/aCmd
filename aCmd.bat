@@ -5,10 +5,18 @@ echo Another Command Prompt
 echo Copyright (c) 2011 Shea Bunge (http://bungeshea.com)
 if exist user.bat call user.bat
 if exist "%APPDATA%\user.bat" call "%APPDATA%\user.bat"
-:start
-echo.
 @echo on
+:chkargs
+@set args=0
+@if [%1] NEQ [] set args=1
+@if %args% == 0 goto start
+@echo.
+@echo %cd%^>%1
+@%1 2>&1
+@shift
+@goto chkargs
+:start
+@echo.
 @set /p acmd=%cd%^>
 @%acmd% 2>&1
-@echo off
-goto start
+@goto start
