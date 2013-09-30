@@ -9,6 +9,6 @@ if exist "%APPDATA%\user.bat" call "%APPDATA%\user.bat"
 echo.
 @echo on
 @set /p acmd=%cd%^>
-@%acmd%
+@%acmd% 2>&1
 @echo off
 goto start
