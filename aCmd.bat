@@ -6,10 +6,8 @@ echo Copyright (c) 2011 Shea Bunge (http://bungeshea.com)
 if exist user.bat call user.bat
 :start
 echo.
-echo CD: %cd%
-echo.
 @echo on
-@set /p acmd=
-%acmd%
+@set /p acmd=%cd%)
+@%acmd%
 @echo off
 goto start
