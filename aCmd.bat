@@ -7,8 +7,8 @@ echo Copyright (c) 2011 Shea Bunge (http://bungeshea.com)
 echo.
 echo CD: %cd%
 echo.
-set /p cmd=
 @echo on
-%cmd%
+@set /p acmd=
+%acmd%
 @echo off
 goto start
