@@ -1,11 +1,9 @@
-@echo off
-title Another Command Prompt
-color 0F
-echo Another Command Prompt 0.4
-echo (http://acmd.sourceforge.net)
-if exist user.bat call user.bat
-if exist "%APPDATA%\user.bat" call "%APPDATA%\user.bat"
-@echo on
+@title Another Command Prompt
+@color 0F
+@echo Another Command Prompt 0.4
+@echo (http://acmd.sourceforge.net)
+@if exist user.bat @call user.bat
+@if exist "%APPDATA%\user.bat" @call "%APPDATA%\user.bat"
 :chkargs
 @set args=0
 @if [%1] NEQ [] set args=1
