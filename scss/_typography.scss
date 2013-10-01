@@ -2,8 +2,8 @@
 #{headings()} {
 	font-weight: normal;
 	margin: 0 0 20px;
-	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-	color: #b5e853;
+	font-family: $font;
+	color: $green;
 	letter-spacing: -0.03em;
 	text-shadow:
 		0 1px 1px rgba(0, 0, 0, 0.1),
@@ -55,8 +55,12 @@ section {
 }
 
 a {
-	color: #63c0f5;
+	color: $blue;
 	text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
+
+	&:hover {
+		color: $green;
+	}
 }
 
 dt {
@@ -69,9 +73,9 @@ ul li {
 
 	&:before {
 		content: ">>";
-		font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+		font-family: $font;
 		font-size: 13px;
-		color: #b5e853;
+		color: $green;
 		margin-left: -37px;
 		margin-right: 21px;
 		line-height: 16px;
@@ -93,7 +97,7 @@ pre {
 	border: 1px solid rgba(255, 255, 255, 0.15);
 	padding: 10px;
 	font-size: 14px;
-	color: #b5e853;
+	color: $green;
 	border-radius: 2px;
 	text-wrap: normal;
 	overflow: auto;
@@ -107,7 +111,7 @@ table {
 
 th {
 	text-align: left;
-	border-bottom: 1px dashed #b5e853;
+	border-bottom: 1px dashed $green;
 	padding: 5px 10px;
 }
 
@@ -118,6 +122,6 @@ td {
 hr {
 	height: 0;
 	border: 0;
-	border-bottom: 1px dashed #b5e853;
-	color: #b5e853;
+	border-bottom: 1px dashed $green;
+	color: $green;
 }

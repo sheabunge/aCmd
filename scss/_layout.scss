@@ -17,7 +17,7 @@ body {
 .site-header {
 	background: rgba(0, 0, 0, 0.1);
 	width: 100%;
-	border-bottom: 1px dashed #b5e853;
+	border-bottom: 1px dashed $green;
 	padding: 20px 0;
 	margin: 0 0 40px 0;
 
@@ -28,7 +28,7 @@ body {
 		margin: 0 0 0 -40px;
 		font-weight: bold;
 		font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-		color: #b5e853;
+		color: $green;
 		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
 		             0 0 5px rgba(181, 232, 83, 0.1),
 		             0 0 10px rgba(181, 232, 83, 0.1);
@@ -52,7 +52,7 @@ body {
 	text-align: center;
 
 	&:before {
-		border-top: 1px dashed #b5e853;
+		border-top: 1px dashed $green;
 	}
 
 	.genericon {
@@ -61,5 +61,6 @@ body {
 		width: 35px;
 		text-align: center;
 		margin-left: 7px;
+		text-shadow: none;
 	}
 }
