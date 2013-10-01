@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.41
+_Released on 2013-10-01_
+
+* Remove bright text color
+* Update website URL
+
 ## 0.4
 _Released on 2012-05-26_
 
