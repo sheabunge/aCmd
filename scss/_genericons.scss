@@ -11,9 +11,9 @@
 @include font-face(
 	'Genericons',
 	font-files(
-		'genericons/genericons-regular-webfont.woff', woff,
-		'genericons/genericons-regular-webfont.ttf', truetype,
-		'genericons/genericons-regular-webfont.svg', svg
+		'genericons-regular-webfont.woff', woff,
+		'genericons-regular-webfont.ttf', truetype,
+		'genericons-regular-webfont.svg', svg
 	),
 	'genericons/genericons-regular-webfont.eot'
 );
