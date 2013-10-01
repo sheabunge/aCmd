@@ -1,5 +1,4 @@
 @title Another Command Prompt
-@color 0F
 @echo Another Command Prompt 0.4
 @echo (http://acmd.bungeshea.com)
 @if exist user.bat @call user.bat
