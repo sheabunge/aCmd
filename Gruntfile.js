@@ -1,7 +1,8 @@
+/*global module:false*/
 module.exports = function(grunt) {
 	'use strict';
 
-	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+	require('load-grunt-tasks')(grunt);
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -10,10 +11,7 @@ module.exports = function(grunt) {
 
 			styles: {
 				files: ['scss/**/*.{scss,sass}'],
-				tasks: ['styles'],
-				options: {
-					debounceDelay: 500
-				}
+				tasks: ['postcss']
 			},
 
 			livereload: {
@@ -28,25 +26,21 @@ module.exports = function(grunt) {
 			}
 		},
 
-		compass: {
-			dist: {}
-		},
-
-		autoprefixer: {
+		postcss: {
+			options: {
+				map: true,
+				processors: [
+					require('precss')(),
+					require('autoprefixer')(),
+					require('cssnano')()
+				]
+			},
 			dist: {
+				cwd: 'scss',
+				src: ['*.scss', '!_*.scss'],
+				dest: 'css',
 				expand: true,
-				flatten: true,
-				src: 'css/*.css',
-				dest: 'css'
-			}
-		},
-
-		csso: {
-			dist: {
-				expand: true,
-				flatten: true,
-				src: 'css/*.css',
-				dest: 'css'
+				ext: '.css'
 			}
 		},
 
@@ -64,9 +58,7 @@ module.exports = function(grunt) {
 		        }]
 		    }
 		}
-
 	});
 
-	grunt.registerTask( 'styles', ['compass', 'autoprefixer', 'csso'] );
-	grunt.registerTask( 'default', ['styles'] );
+	grunt.registerTask( 'default', ['postcss'] );
 };

@@ -1,9 +1,10 @@
+
 body {
 	margin: 0;
 	padding: 0;
-	background: #151515 image-url('background.png') 0 0;
+	background: #151515 url(../images/background.png) 0 0;
 	color: #eaeaea;
-	font: 16px;
+	font-size: 16px;
 	line-height: 1.5;
 	font-family: $font;
 }
