@@ -60,6 +60,10 @@ body {
 
 	a {
 		text-decoration: none;
+
+		&:hover svg {
+			fill: $blue;
+		}
 	}
 
 	svg {
@@ -70,9 +74,5 @@ body {
 		margin-left: 7px;
 		fill: $color;
 		filter: drop-shadow($shadow);
-
-		&:hover {
-			fill: $blue;
-		}
 	}
 }
