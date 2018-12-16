@@ -1,5 +1,5 @@
 /*global module:false*/
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 	'use strict';
 
 	require('load-grunt-tasks')(grunt);
@@ -45,20 +45,20 @@ module.exports = function(grunt) {
 		},
 
 		imagemin: {
-		    dist: {
-		        options: {
-		            optimizationLevel: 7,
-		            progressive: true
-		        },
-		        files: [{
-		            expand: true,
-		            cwd: 'images/',
-		            src: '**/*',
-		            dest: 'images/'
-		        }]
-		    }
+			dist: {
+				options: {
+					optimizationLevel: 7,
+					progressive: true
+				},
+				files: [{
+					expand: true,
+					cwd: 'images/',
+					src: '**/*',
+					dest: 'images/'
+				}]
+			}
 		}
 	});
 
-	grunt.registerTask( 'default', ['postcss'] );
+	grunt.registerTask('default', ['postcss']);
 };
