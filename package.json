@@ -1,11 +1,11 @@
 {
   "name": "acmd-web",
   "title": "Another Command Prompt Website",
-  "homepage": "https://acmd.bungeshea.com",
+  "homepage": "https://acmd.sheabunge.com",
   "author": {
     "name": "Shea Bunge",
-    "email": "info@bungeshea.com",
-    "url": "https://bungeshea.com"
+    "email": "shea@sheabunge.com",
+    "url": "https://sheabunge.com"
   },
   "devDependencies": {
     "autoprefixer": "^8.5.0",
